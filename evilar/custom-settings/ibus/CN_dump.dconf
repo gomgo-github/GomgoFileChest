@@ -1,7 +1,7 @@
 [general]
 embed-preedit-text=true
-engines-order=['xkb:es::spa', 'libpinyin', 'xkb:gr::ell', 'xkb:pt::por', 'xkb:us::eng']
-preload-engines=['xkb:es::spa', 'libpinyin', 'xkb:gr::ell', 'xkb:pt::por', 'xkb:us::eng']
+engines-order=['xkb:es::spa', 'libpinyin', 'xkb:us::eng', 'xkb:gr::ell', 'xkb:pt::por', 'libbopomofo']
+preload-engines=['xkb:es::spa', 'libpinyin', 'xkb:us::eng','xkb:gr::ell', 'xkb:pt::por', 'libbopomofo']
 use-system-keyboard-layout=false
 version='1.5.23'
 
