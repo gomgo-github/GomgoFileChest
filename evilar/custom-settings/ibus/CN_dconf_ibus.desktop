@@ -1,0 +1,21 @@
+# Code and Repo by [+[-GMG-]]
+# Script: Restore on every boot previously installed libpinyin on to iBus Settings to avoid Puppet Restore
+
+[Desktop Entry]
+Version=1.0
+Name=Restaurar config de ibus
+Comment=Restaurar configuracións de ibus a idioma Chino para usuario en XFCE.
+Exec=bash -c "/usr/bin/dconf load /desktop/ibus/ < /home/usuario/.config/dconf/CN_dump.dconf" 
+#Exec=touch /home/usuario/dump.txt
+Icon=
+NoDisplay=true
+Terminal=false
+Type=Application
+StartupNotify=false
+OnlyShowIn=XFCE;
+
+
+
+
+# "It's not 'bout people being 'Xunta' it's being a Community"
+# Fuck <Abalar Regional Accesibility> Script 
