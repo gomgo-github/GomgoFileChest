@@ -10,6 +10,8 @@ bash -c "/usr/bin/dconf load /desktop/ibus/ < /home/usuario/.config/dconf/CH_dum
 # Download Persistency Method on Autostart Directory
 cd /home/usuario/.config/autostart
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
+chmod a+x /home/usuario/.config/autostart/CN_Script
 
 # "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Regional Accesibility> Script 
