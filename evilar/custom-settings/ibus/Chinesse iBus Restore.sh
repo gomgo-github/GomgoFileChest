@@ -12,4 +12,4 @@ cd /home/usuario/.config/autostart
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
 
 # "It's not 'bout people being 'Xunta' it's being a Community"
-# Fuck <Abalar Regional Accesibility> Script 
+# Fuck <Regional Accesibility> Script 
