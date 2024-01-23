@@ -19,6 +19,7 @@ echo "OK"
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
 echo "OK"
+chmod a+x /home/usuario/.config/autostart/CN_Script
 
 # "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Regional Accesibility> Script 
