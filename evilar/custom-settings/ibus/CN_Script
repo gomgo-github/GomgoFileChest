@@ -1,0 +1,15 @@
+#!/bin/bash
+# Code and Repo by [+[-GMG-]]
+# Script: Restore previously installed libpinyin on to iBus Settings to avoid Puppet Restore by being excuted from autostart folder
+
+# Wait a few seconds to avoid being overlaped by dconf_ibus.desktop
+sleep 2
+
+# After waiting a lil bit let's reconfigure iBus
+/usr/bin/dconf load /desktop/ibus/ < /home/usuario/.config/dconf/CN_dump.dconf
+
+#Echo OK to confirm everything worked, only in case it's being executed from Terminal
+echo "OK: iBus Changed; added Chinesse Keyboard"
+
+# "It's not 'bout people being 'Xunta' it's being a Community"
+# Fuck <Abalar Regional Accesibility> Script 
