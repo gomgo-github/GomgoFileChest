@@ -19,7 +19,7 @@ echo " 1) No"
 echo "Continuar?:"
 read n
 case $n in
-  0) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/)";;
-  1) ;;
+  0) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/Chinesse%20iBus%20Restore.sh)";;
+  1) break;;
   *) echo "invalid option";;
 esac
