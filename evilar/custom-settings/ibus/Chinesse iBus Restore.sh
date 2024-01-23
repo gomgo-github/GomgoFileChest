@@ -4,9 +4,9 @@
 
 # Download prerequisited libpinyin settings in directory  
 cd /home/usuario/.config/dconf/
-if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf;
+if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf;fi
 echo "OK"
-wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dump.dconf; fi
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dump.dconf
 bash -c "/usr/bin/dconf load /desktop/ibus/ < /home/usuario/.config/dconf/CN_dump.dconf"
 echo "OK"
 
