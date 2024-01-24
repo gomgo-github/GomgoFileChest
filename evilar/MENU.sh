@@ -10,10 +10,10 @@ echo "      |  _|  \ \ / / | || |     / _ \ | |_) | "
 echo "      | |___  \ V /  | || |___ / ___ \|  _ <  "
 echo "      |_____|  \_/  |___|_____/_/   \_\_| \_\ "
 echo "  "
-echo "                  Booting up..."
+echo "                    Loading..."
 echo ""
-echo "                  : [+[-GMG-]]"
-wait 2                                       
+echo "                    [+[-GMG-]]"
+wait 7                                       
 
 clear
 echo
