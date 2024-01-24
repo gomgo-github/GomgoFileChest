@@ -13,7 +13,7 @@ echo "  "
 echo "                    Loading..."
 echo ""
 echo "                    [+[-GMG-]]"
-sleep 5
+sleep 2
 
 clear
 echo
