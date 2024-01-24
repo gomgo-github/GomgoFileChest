@@ -12,15 +12,16 @@ echo "      |_____|  \_/  |___|_____/_/   \_\_| \_\ "
 echo "  "
 echo "                  Booting up..."
 echo ""
-echo "                  : [+[-GMG-]]
+echo "                  : [+[-GMG-]]"
 wait 2                                       
 
 clear
+echo
 echo "================================================="
 echo "                 Evilar Int Menu                 "
 echo "================================================="
 echo ""
-echo " 1) Instalar Persistencia de Teclado Chino"
+echo " 1) Instalar Persistencia de Teclado Chino "
 echo " "
 echo ""
 echo ""
