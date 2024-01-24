@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bash Menu Script for Evilar
-# Thx to #sudoer on StackOverflow for the Menu Template
+
 clear
 echo ""
 echo ""
@@ -13,7 +13,7 @@ echo "  "
 echo "                    Loading..."
 echo ""
 echo "                    [+[-GMG-]]"
-sleep 2
+sleep 5
 
 clear
 echo
