@@ -1,6 +1,19 @@
 #!/bin/bash
 # Bash Menu Script for Evilar
 # Thx to #sudoer on StackOverflow for the Menu Template
+clear
+echo ""
+echo ""
+echo "       _______     _____ _        _    ____   "
+echo "      | ____\ \   / /_ _| |      / \  |  _ \  "
+echo "      |  _|  \ \ / / | || |     / _ \ | |_) | "
+echo "      | |___  \ V /  | || |___ / ___ \|  _ <  "
+echo "      |_____|  \_/  |___|_____/_/   \_\_| \_\ "
+echo "  "
+echo "                  Booting up..."
+echo ""
+echo "                  : [+[-GMG-]]
+wait 2                                       
 
 clear
 echo "================================================="
@@ -9,6 +22,7 @@ echo "================================================="
 echo ""
 echo " 1) Instalar Persistencia de Teclado Chino"
 echo " "
+echo ""
 echo ""
 echo ""
 echo ""
