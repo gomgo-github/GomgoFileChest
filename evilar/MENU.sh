@@ -13,7 +13,7 @@ echo "  "
 echo "                    Loading..."
 echo ""
 echo "                    [+[-GMG-]]"
-wait 7                                       
+wait 2
 
 clear
 echo
