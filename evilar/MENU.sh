@@ -14,5 +14,7 @@ echo "                    Loading..."
 echo ""
 echo "                    [+[-GMG-]]"
 sleep 2
+clear
+echo "Redirecting..."
 
 sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Menus/MENU.sh)"
