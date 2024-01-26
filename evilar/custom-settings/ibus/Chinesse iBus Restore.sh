@@ -21,5 +21,11 @@ wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar
 echo "OK"
 chmod a+x /home/usuario/.config/autostart/CN_Script
 
+echo "====================================="
+echo "修复了中文键盘错误，现在即使重启后也能使用。"
+echo "您可以关闭该程序"
+echo ""
+echo "欣赏!"
+echo "====================================="
 # "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Regional Accesibility> Script 
