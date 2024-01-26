@@ -6,7 +6,7 @@
 # Download prerequisited libpinyin settings in directory  
 cd /home/usuario/.config/dconf/
 if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf
-echo "OK"
+echo "Deleted Custom dconf!"
 else
 echo "dconf file doesn't exist :/"
 fi
@@ -14,17 +14,16 @@ fi
 # Download Persistency Method on Autostart Directory
 cd /home/usuario/.config/autostart
 if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then rm /home/usuario/.config/autostart/CN_dconf_ibus.desktop;
-echo "OK"
+echo "Deleted ExecOnBoot: OK"
 else
 echo "ExecOnBoot file doesn't exist :/"
 fi
 if [ -f /home/usuario/.config/autostart/CN_Script ]; then rm /home/usuario/.config/autostart/CN_Script;
-echo "OK";
+echo "deleted UpdatableBootScript: OK";
 else
 echo "UpdatableBootScript doesn't exist"
 fi
-echo "OK"
-chmod a+x /home/usuario/.config/autostart/CN_Script
+echo "¡OK!"
 
 #TODO: Change This text
 echo "============================================"
