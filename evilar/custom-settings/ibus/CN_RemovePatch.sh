@@ -28,10 +28,10 @@ chmod a+x /home/usuario/.config/autostart/CN_Script
 
 #TODO: Change This text
 echo "============================================"
-echo "修复了中文键盘错误，现在即使重启后也能使用。"
+echo "已从系统中删除中文键盘修复程序"
 echo "您可以关闭该程序"
 echo ""
-echo "欣赏!"
+echo "再见!"
 echo "============================================"
 # "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Regional Accesibility> Script 
