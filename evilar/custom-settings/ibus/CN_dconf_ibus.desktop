@@ -7,5 +7,4 @@ Comment=Restaurar configuracións de ibus a idioma Chino para usuario en XFCE.
 Exec="/home/usuario/.config/autostart/CN_Script"
 Type=Application
 
-# "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Abalar Regional Accesibility> Script 
