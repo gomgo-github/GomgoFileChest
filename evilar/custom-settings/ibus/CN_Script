@@ -11,5 +11,4 @@ sleep 2
 #Echo OK to confirm everything worked, only in case it's being executed from Terminal
 echo "OK: iBus Changed; added Chinesse Keyboard"
 
-# "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Abalar Regional Accesibility> Script 
