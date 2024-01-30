@@ -27,5 +27,4 @@ echo "您可以关闭该程序"
 echo ""
 echo "欣赏!"
 echo "============================================"
-# "It's not 'bout people being 'Xunta' it's being a Community"
 # Fuck <Regional Accesibility> Script 
