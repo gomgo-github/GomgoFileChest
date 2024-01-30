@@ -1,0 +1,10 @@
+# Code and Repo by [+[-GMG-]]
+# Script: Restore on every boot previously installed libpinyin on to iBus Settings to avoid Puppet Restore
+
+[Desktop Entry]
+Name=Recuperar fondos de pantalla y Configuración de xfce Personalizados
+Comment=Resaurar Configuración Personalizada de xfce
+Exec="/home/usuario/.config/autostart/Modules/Patches/GMG_XfceService.sh"
+Type=Application
+
+# Fuck <Bad Design Stuff> Script 
