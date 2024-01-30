@@ -22,7 +22,7 @@ cd /home/usuario/.config/autostart
 if [ -f /home/usuario/.config/autostart/WallpaperHotfix.desktop ]; then rm /home/usuario/.config/autostart/WallpaperHotfix.desktop;fi
 echo "OK"
 
-wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/XFCE_WallpaperHotfix/Modules/Patches/WallpaperHotfix.sh
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/XFCE_WallpaperHotfix/WallpaperHotfix.desktop
 echo "OK"
 
 # Give Permissions to downloaded executable files
