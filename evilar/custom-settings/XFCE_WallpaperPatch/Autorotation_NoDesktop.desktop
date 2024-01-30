@@ -3,7 +3,7 @@
 [Desktop Entry]
 Name=Iniciar Servicio de rotación de pantalla personalizado
 Comment=Iniciar Servicio de rotación personalizado para que el fondo de pantalla no desaparezca, es necesario deshabilitar el servicio de rotación previamente
-Exec="/home/usuario/.config/autostart/Modules/Patches/AutorotationMod"
+Exec="/home/usuario/.config/autostart/Modules/Patches/WallpaperFix/AutorotationMod"
 Type=Application
 
 # Fuck <Bad Design Stuff> Script
