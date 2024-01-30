@@ -1,0 +1,137 @@
+#!/bin/sh
+# Auto rotate screen based on device orientation but withouth changing Desktop Image
+# Service Mod, you must stop autorotation service before running this script
+
+sleep 1
+/home/usuario/.config/autostart/Modules/Patches/stop_autorotation.sh
+notify-send -t 100 "Servicio de Escritorio Activado"
+
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+sensors_log=/tmp/sensor.log
+PRODUCT_NAME=$(cat /sys/class/dmi/id/product_name)
+SYS_VENDOR=$(cat /sys/class/dmi/id/sys_vendor)
+
+TRANSFORM='Coordinate Transformation Matrix'
+RIGHT_ROTATE='right'
+LEFT_ROTATE='left'
+NORMAL_ROTATE='normal'
+INVERTED_ROTATE='inverted'
+RIGHT_COORDINATE='0 1 0 -1 0 1 0 0 1'
+LEFT_COORDINATE='0 -1 1 1 0 0 0 0 1'
+NORMAL_COORDINATE='1 0 0 0 1 0 0 0 1'
+INVERTED_COORDINATE='-1 0 1 0 -1 1 0 0 1'
+
+case $PRODUCT_NAME in
+	# HP X360 G1
+	"HP ProBook x360 11 G1 EE")
+		TOUCHSCREEN="pointer:$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep -v Pen | grep ELAN | head -n 1)"
+		TOUCHPAD=$(cat /sys/class/input/mouse*/device/name | grep pad | head -n 1)
+		PEN=$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep ELAN | grep Pen | head -n 1)
+		SCREENPORT='eDP-1'
+	;;
+esac
+
+case $PRODUCT_NAME in
+	# HP X360 G5
+	"HP ProBook x360 11 G5 EE")
+		TOUCHSCREEN="pointer:$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep -v Pen | grep -v Mouse | grep ELAN | head -n 1)"
+		TOUCHPAD=$(cat /sys/class/input/mouse*/device/name | grep pad | head -n 1)
+		PEN=$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep ELAN | grep Pen | head -n 1)
+		SCREENPORT='eDP-1'
+	;;
+esac
+
+case $PRODUCT_NAME in
+	# HP X360 G9
+	"HP Pro x360 Fortis 11 inch G9 Notebook PC")
+		TOUCHSCREEN="pointer:$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep -v Pen | grep -v Mouse | grep ELAN | head -n 1)"
+		TOUCHPAD=$(cat /sys/class/input/mouse*/device/name | grep pad | head -n 1)
+		PEN=$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep ELAN | grep Pen | head -n 1)
+		SCREENPORT='eDP-1'
+	;;
+esac
+
+
+case $SYS_VENDOR in
+	# Lenovo Yoga 11e
+	"LENOVO")
+		TOUCHSCREEN="$(grep Wacom /proc/bus/input/devices | grep Finger | cut -d'=' -f2 | sed 's/.//;s/.$//') touch"
+		TOUCHPAD='Elan Touchpad'
+		PEN="$(grep Wacom /proc/bus/input/devices | grep Pen | cut -d'=' -f2 | sed 's/.//;s/.$//') stylus"
+		SCREENPORT='eDP-1'
+	;;
+		#Acer TravelMate Spin B311R-31
+	"Acer")
+		TOUCHSCREEN=$(cat /sys/class/input/mouse*/device/name | grep -v pad | grep -v Pen | grep -v Mouse | grep ELAN | head -n 1)
+		TOUCHPAD=$(cat /sys/class/input/mouse*/device/name | grep pad | head -n 1)
+		SCREENPORT='eDP-1'
+	;;
+esac
+
+# Clear sensor.log so it doesn't get too long over time
+> $sensors_log
+
+echo "Detected screen port: ${SCREENPORT}" >> $sensors_log 2>&1 &
+echo "Detected touchscreen: ${TOUCHSCREEN}" >> $sensors_log 2>&1 &
+echo "Detected touchpad: ${TOUCHPAD}" >> $sensors_log 2>&1 &
+echo "Detected pen: ${PEN}" >> $sensors_log 2>&1 &
+
+# Launch monitor-sensor and store the output in a variable that can be parsed by the rest of the script
+monitor-sensor >> $sensors_log 2>&1 &
+
+# Parse output or monitor sensor to get the new orientation whenever the log file is updated
+# Possibles are: normal, bottom-up, right-up, left-up
+# Light data will be ignored
+while inotifywait -e modify $sensors_log; do
+# Read the last line that was added to the file and get the orientation
+ORIENTATION=$(tail -n 1 $sensors_log | grep 'orientation' | grep -oE '[^ ]+$')
+
+# Set the actions to be taken for each possible orientation
+case "$ORIENTATION" in
+	normal)
+		xrandr --output $SCREENPORT --rotate ${NORMAL_ROTATE}
+	       	xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" ${NORMAL_COORDINATE}
+	       	xinput set-prop "$TOUCHPAD"    "$TRANSFORM" ${NORMAL_COORDINATE}
+                xinput set-prop "$PEN"         "$TRANSFORM" ${NORMAL_COORDINATE}
+                # Esperar hasta que la sesión de Xfce esté activa
+                while ! pgrep -x "xfce4-session" >/dev/null; do
+                  sleep 1
+                done
+
+		;;
+	bottom-up)
+		xrandr --output $SCREENPORT --rotate ${INVERTED_ROTATE}
+	       	xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" ${INVERTED_COORDINATE}
+	       	xinput set-prop "$TOUCHPAD"    "$TRANSFORM" ${INVERTED_COORDINATE}
+	       	xinput set-prop "$PEN"         "$TRANSFORM" ${INVERTED_COORDINATE}
+                # Esperar hasta que la sesión de Xfce esté activa
+                while ! pgrep -x "xfce4-session" >/dev/null; do
+                  sleep 1
+                done
+
+		;;
+	right-up)
+		xrandr --output $SCREENPORT --rotate ${RIGHT_ROTATE}
+	       	xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" ${RIGHT_COORDINATE}
+	       	xinput set-prop "$TOUCHPAD"    "$TRANSFORM" ${RIGHT_COORDINATE}
+	       	xinput set-prop "$PEN"         "$TRANSFORM" ${RIGHT_COORDINATE}
+                # Esperar hasta que la sesión de Xfce esté activa
+                while ! pgrep -x "xfce4-session" >/dev/null; do
+                  sleep 1
+                done
+
+		;;
+	left-up)
+		xrandr --output $SCREENPORT --rotate ${LEFT_ROTATE}
+		xinput set-prop "$TOUCHSCREEN" "$TRANSFORM" ${LEFT_COORDINATE}
+		xinput set-prop "$TOUCHPAD"    "$TRANSFORM" ${LEFT_COORDINATE}
+		xinput set-prop "$PEN"         "$TRANSFORM" ${LEFT_COORDINATE}
+		# Esperar hasta que la sesión de Xfce esté activa
+		while ! pgrep -x "xfce4-session" >/dev/null; do
+		  sleep 1
+		done
+
+		;;
+esac
+done
+
