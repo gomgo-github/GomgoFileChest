@@ -27,10 +27,8 @@ echo "¡OK!"
 
 #TODO: Change This text
 echo "============================================"
-echo "已从系统中删除中文键盘修复程序"
-echo "您可以关闭该程序"
-echo ""
-echo "再见!"
+echo "移除补丁，移除中文键盘持久性"
+echo "祝您愉快!"
 echo "============================================"
 
 # Fuck <Regional Accesibility> Script 
