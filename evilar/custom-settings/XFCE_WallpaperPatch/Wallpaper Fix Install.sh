@@ -25,6 +25,7 @@ echo "OK"
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/AutorotationMod
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/stop_autorotation.sh
 
+notify-send -t 100 "Parche de Fondo de Pantalla Instalado!"
 echo "============================================"
 echo "桌面补丁现已安装。现在你可以设置自己的壁纸了"
 echo "您可以关闭该程序"
