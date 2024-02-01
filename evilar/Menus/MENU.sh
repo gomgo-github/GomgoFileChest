@@ -17,7 +17,7 @@ echo " 0) Quit"
 echo ""
 echo ""
 
-echo "Escribe el Número del Programa a ejecutar (0-1):"
+echo "Escribe el Número del Programa a ejecutar (0-2):"
 read n
 case $n in
   0) break;;
