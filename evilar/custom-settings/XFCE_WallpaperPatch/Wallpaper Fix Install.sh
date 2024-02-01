@@ -25,6 +25,9 @@ echo "OK"
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/AutorotationMod
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/stop_autorotation.sh
 
+sudo /bin/systemctl stop autorotation.service
+sudo /bin/systemctl disable autorotation.service
+
 notify-send -t 2000 "Parche de Fondo de Pantalla Instalado!"
 echo "============================================"
 echo "桌面补丁现已安装。现在你可以设置自己的壁纸了"
@@ -32,5 +35,7 @@ echo "您可以关闭该程序"
 echo ""
 echo "欣赏!"
 echo "============================================"
+
+echo "Por favor, reinicia el ordenador para que el parche se aplique" 
 
 # Fuck <Regional Accesibility> Script 
