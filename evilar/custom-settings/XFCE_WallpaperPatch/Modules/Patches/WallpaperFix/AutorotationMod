@@ -3,7 +3,7 @@
 # Service Mod, you must stop autorotation service before running this script
 
 sleep 1
-/home/usuario/.config/autostart/Modules/Patches/stop_autorotation.sh
+/home/usuario/.config/autostart/Modules/Patches/WallpaperFix/stop_autorotation.sh
 
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 sensors_log=/tmp/sensor.log
