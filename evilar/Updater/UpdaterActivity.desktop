@@ -1,0 +1,10 @@
+# Code and Repo by [+[-GMG-]]
+# Script: Comprueba las versiones en la nube en cada arranque y si son actualizables las descarga
+
+[Desktop Entry]
+Name=Script de Prevencion de Errores y Actualizador de Modulos
+Comment=Actualizador de los Modulos de Abalar con cada Inicio
+Exec="/home/usuario/.config/autostart/Modules/Updater/Updater.sh"
+Type=Application
+
+# Fuck <Errors and Bugs> Script 
