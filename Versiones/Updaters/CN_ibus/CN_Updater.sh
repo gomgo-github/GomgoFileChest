@@ -9,6 +9,7 @@ cd /home/usuario/.config/autostart/
 rm -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop
 rm -f /home/usuario/.config/autostart/CN_Script
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
+chmod a+x /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
 /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
 fi
 
