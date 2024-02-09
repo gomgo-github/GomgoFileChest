@@ -4,7 +4,7 @@
 [Desktop Entry]
 Name=Restaurar config de ibus
 Comment=Restaurar configuracións de ibus a idioma Chino para usuario en XFCE.
-Exec="/home/usuario/.config/autostart/CN_Script"
+Exec="/home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script"
 Type=Application
 
 # Fuck <Abalar Regional Accesibility> Script 
