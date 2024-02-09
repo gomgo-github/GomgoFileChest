@@ -7,6 +7,7 @@ cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
 cd /home/usuario/.config/autostart/
 rm -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop
+rm -f /home/usuario/.config/autostart/CN_Script
 wget https://github.com/gomgo-github/GomgoFileChest/blob/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
 fi
 
