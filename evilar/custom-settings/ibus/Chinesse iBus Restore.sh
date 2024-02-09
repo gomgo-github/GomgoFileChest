@@ -14,12 +14,13 @@ echo "OK"
 cd /home/usuario/.config/autostart
 if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then rm /home/usuario/.config/autostart/CN_dconf_ibus.desktop;fi
 echo "OK"
-if [ -f /home/usuario/.config/autostart/CN_Script ]; then rm /home/usuario/.config/autostart/CN_Script; fi
+cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
+if [ -f /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script; fi
 echo "OK"
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
 echo "OK"
-chmod a+x /home/usuario/.config/autostart/CN_Script
+chmod a+x /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
 
 echo "============================================"
 echo "修复了中文键盘错误，现在即使重启后也能使用。"
