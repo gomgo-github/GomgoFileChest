@@ -9,8 +9,8 @@ cd /home/usuario/.config/autostart/
 rm -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop
 rm -f /home/usuario/.config/autostart/CN_Script
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
+/home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
 fi
-
 
 #Actualizar Versión
 cd /home/usuario/.config/autostart/Modules/Versions/
