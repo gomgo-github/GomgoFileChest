@@ -1,6 +1,15 @@
 #!/bin/bash
 
-#TODO: Code
+#Update01 for Old Versions: If CN_Script is on Autostart folder, Version is too old, update to latest modifying path
+if [ -f /home/usuario/.config/autostart/CN_Script ];then
+mkdir -p /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
+cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
+cd /home/usuario/.config/autostart/
+rm -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop
+wget https://github.com/gomgo-github/GomgoFileChest/blob/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
+fi
+
 
 #Actualizar Versión
 cd /home/usuario/.config/autostart/Modules/Versions/
