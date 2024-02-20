@@ -16,7 +16,7 @@ if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; the
 if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm -rf /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/; fi
 echo "OK"
 
-if [ -f /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v ]; then rm -rf /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v
+if [ -f /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v ]; then rm -rf /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v;fi
 
 echo "============================================"
 echo "删除中文键盘补丁，重启电脑以应用更改。"
