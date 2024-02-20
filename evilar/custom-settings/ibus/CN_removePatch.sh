@@ -13,7 +13,6 @@ if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then rm /home/u
 echo "OK"
 if [ -f /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script; fi
 if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm -rf /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/; fi
-if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm -rf /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/; fi
 echo "OK"
 
 if [ -f /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v ]; then rm -rf /home/usuario/.config/autostart/Modules/Versions/CN_ibus.v;fi
