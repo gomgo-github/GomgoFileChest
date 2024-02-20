@@ -21,6 +21,8 @@ wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
 echo "OK"
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
+sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/Versiones/Updaters/CN_ibus/CN_Updater.sh)"
+
 
 echo "============================================"
 echo "修复了中文键盘错误，现在即使重启后也能使用。"
