@@ -23,7 +23,11 @@ cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
 echo "OK"
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
-sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/Versiones/Updaters/CN_ibus/CN_Updater.sh)"
+cd /home/usuario/.config/dconf/
+if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf; fi
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dump.dconf
+echo "OK"
+# sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/Versiones/Updaters/CN_ibus/CN_Updater.sh)"
 
 
 echo "============================================"
