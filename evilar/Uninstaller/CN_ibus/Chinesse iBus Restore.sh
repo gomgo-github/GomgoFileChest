@@ -2,7 +2,7 @@
 # Code and Repo by [+[-GMG-]]
 # Script: Create persistent code to restore previously installed libpinyin on to iBus Settings to avoid Puppet Restore
 
-# Download prerequisited libpinyin settings in directory  
+# Download prerequisited libpinyin settings in directory
 cd /home/usuario/.config/dconf/
 if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf;fi
 echo "OK"
