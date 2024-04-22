@@ -6,10 +6,10 @@ echo "================================================="
 echo "                 Evilar DEL Menu                 "
 echo "================================================="
 echo ""
-if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo " 1) Borrar Persistencia de Teclado Chino";fi
-if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo "     (移除中文键盘补丁)";fi
-if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo " 2) Borrar Persistencia del Fondo de Pantalla"; fi
-if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo "     (移除壁纸补丁)"; fi
+if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo " 1) Borrar Persistencia de Teclado Chino";else echo "";fi
+if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo "     (移除中文键盘补丁)";else echo "";fi
+if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo " 2) Borrar Persistencia del Fondo de Pantalla";else echo "";fi
+if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo "     (移除壁纸补丁)";else echo "";fi
 echo ""
 echo ""
 echo ""
