@@ -6,10 +6,10 @@ echo "================================================="
 echo "                 Evilar DEL Menu                 "
 echo "================================================="
 echo ""
-echo " 1) Borrar Persistencia de Teclado Chino"
-echo "     (移除中文键盘补丁)"
-echo " 2) Borrar Persistencia del Fondo de Pantalla"
-echo "     (移除壁纸补丁)"
+if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo " 1) Borrar Persistencia de Teclado Chino";fi
+if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then echo "     (移除中文键盘补丁)";fi
+if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo " 2) Borrar Persistencia del Fondo de Pantalla"; fi
+if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then echo "     (移除壁纸补丁)"; fi
 echo ""
 echo ""
 echo ""
@@ -17,11 +17,11 @@ echo " 0) Quit"
 echo ""
 echo ""
 
-echo "Escribe el Número del Programa a ejecutar (0-1):"
+echo "Escribe el Número del Programa a ejecutar (0, 1, 2...):"
 read n
 case $n in
   0) break;;
-  1) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/CN_ibus/CN_RemovePatch.sh)";;
-  2) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/XFCE_WP/XFCE_WP_Uninstaller.sh)"
+  1) if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/CN_ibus/CN_RemovePatch.sh)";fi;;
+  2) if [ -d /home/usuario/.config/autostart/Modules/Patches/WallpaperFix/ ]; then sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/XFCE_WP/XFCE_WP_Uninstaller.sh)";fi;;
   *) echo "invalid option";;
 esac
