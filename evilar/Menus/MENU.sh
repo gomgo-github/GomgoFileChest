@@ -23,6 +23,6 @@ case $n in
   0) break;;
   1) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/check.sh)";;
   2) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/XFCE_WallpaperPatch/check.sh)";;
-  9) if [ -d /home/usuario/.config/autostart/Modules/ ] || [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/XFCE_WallpaperPatch/check.sh)";else echo "invalid option";fi;;
+  9) if [ -d /home/usuario/.config/autostart/Modules/ ] || [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Menus/DeletePatchesMenu.sh)";else echo "invalid option";fi;;
   *) echo "invalid option";;
 esac
