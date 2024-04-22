@@ -3,7 +3,7 @@
 
 clear
 echo "================================================="
-echo "                 Evilar Del Menu                 "
+echo "                 Evilar DEL Menu                 "
 echo "================================================="
 echo ""
 echo " 1) Borrar Persistencia de Teclado Chino"
@@ -21,6 +21,7 @@ echo "Escribe el Número del Programa a ejecutar (0-1):"
 read n
 case $n in
   0) break;;
-  1) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/check.sh)";;
+  1) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/CN_ibus/CN_RemovePatch.sh)";;
+  2) sh -c "$(curl -sSL https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/Uninstaller/XFCE_WP/XFCE_WP_Uninstaller.sh)"
   *) echo "invalid option";;
 esac

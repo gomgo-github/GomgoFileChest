@@ -3,7 +3,7 @@
 
 clear
 echo "================================================="
-echo "                 Evilar Int Menu                 "
+echo "                 Evilar INT Menu                 "
 echo "================================================="
 echo ""
 echo " 1) Instalar persistencia de Teclado Chino"
