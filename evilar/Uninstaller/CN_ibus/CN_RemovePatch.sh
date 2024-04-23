@@ -23,6 +23,11 @@ echo "deleted UpdatableBootScript: OK";
 else
 echo "UpdatableBootScript doesn't exist"
 fi
+if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus ]; then rm -rf /home/usuario/.config/autostart/Modules/Patches/CN_Ibus;
+echo "deleted UpdatableBootScript: OK";
+else
+echo "UpdatableBootScript doesn't exist"
+fi
 echo "¡OK!"
 
 #TODO: Change This text
