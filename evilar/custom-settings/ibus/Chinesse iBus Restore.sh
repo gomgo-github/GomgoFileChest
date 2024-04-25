@@ -17,11 +17,11 @@ echo "OK"
 cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
 if [ -f /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script; fi
 echo "OK"
+wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
+echo "OK"
 cd /home/usuario/.config/autostart/
 wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_dconf_ibus.desktop
 cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
-wget https://raw.githubusercontent.com/gomgo-github/GomgoFileChest/Evilar/evilar/custom-settings/ibus/CN_Script
-echo "OK"
 chmod a+x /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script
 cd /home/usuario/.config/dconf/
 if [ -f /home/usuario/.config/dconf/CN_dump.dconf ]; then rm /home/usuario/.config/dconf/CN_dump.dconf; fi
