@@ -14,6 +14,9 @@ echo "OK"
 cd /home/usuario/.config/autostart
 if [ -f /home/usuario/.config/autostart/CN_dconf_ibus.desktop ]; then rm /home/usuario/.config/autostart/CN_dconf_ibus.desktop;fi
 echo "OK"
+if [ -d /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/]; then rm /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/;fi
+mkdir /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
+echo "OK"
 cd /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/
 if [ -f /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script ]; then rm /home/usuario/.config/autostart/Modules/Patches/CN_Ibus/CN_Script; fi
 echo "OK"
