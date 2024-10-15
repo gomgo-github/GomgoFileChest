@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Troll
+Exec=/home/usuario/.config/autostart/troll.sh
+NoDisplay=true
+OnlyShowIn=XFCE;
