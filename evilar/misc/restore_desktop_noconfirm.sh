@@ -1,4 +1,5 @@
 #!/bin/bash
+export DISPLAY=:0
 FILE=/home/usuario/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 FILE_ORIGINAL=/home/usuario/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml.ORIGINAL
 
