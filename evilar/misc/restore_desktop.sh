@@ -2,13 +2,6 @@
 FILE=/home/usuario/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 FILE_ORIGINAL=/home/usuario/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml.ORIGINAL
 
-# FUNCIONES
-function check_exit(){
-        if [ $? -ne 0 ]; then
-                exit
-        fi
-}
-
 if [ -f $FILE_ORIGINAL ]; then
         # Kill Desktop
         /usr/bin/xfdesktop --quit
